@@ -9,7 +9,6 @@ ElementData = collections.namedtuple("ElementData", ["tag_name", "attributes"])
 NodeType = Union[Text, ElementData]
 
 
-
 class Node():
     def __init__(self, children, node_type):
         # type: (List[Node], NodeType) -> None
@@ -20,7 +19,6 @@ class Node():
 
         # data specific to each node type
         self.node_type = node_type
-
 
 
 def text(data):
@@ -44,10 +42,3 @@ def elem(name, attrs, children):
             attributes=attrs,
         )
     )
-
-
-if __name__ == "__main__":
-    print(type(AttrMap))
-
-
-
