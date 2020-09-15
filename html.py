@@ -1,7 +1,7 @@
 import dom
 
 
-class Parser():
+class HTMLParser():
     def __init__(self, pos, text):
         #
         """
@@ -43,7 +43,6 @@ class Parser():
         result = ""
 
         while not self.eof() and test(self.next_char()):
-            print("next", self.pos, self.next_char(), test(self.next_char()))
             result += self.consume_char()
 
         return result
@@ -180,3 +179,4 @@ if __name__ == "__main__":
     print(result.children[0].node_type)
     print(result.children[0].children[0].node_type)
     print(result.children[0].children[1].node_type)
+    
